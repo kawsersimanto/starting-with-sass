@@ -1,0 +1,27 @@
+@mixin flex($justify: center) {
+  display: flex;
+  justify-content: $justify;
+  align-items: center;
+}
+
+@mixin button() {
+  padding: 0.8rem 3rem;
+  background-color: $ufo-color;
+  border: 0.1rem solid $ufo-color;
+  border-radius: 1rem;
+  font-size: 1.8rem;
+  font-weight: 600;
+  color: #fff;
+  outline: none;
+  &:hover{
+    background-color: #fff;
+    color: $ufo-color;
+  }
+}
+
+@mixin grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr;
+  grid-template-areas: "banner-content banner-img";
+}

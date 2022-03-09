@@ -1,0 +1,36 @@
+@import "mixin";
+
+main {
+  margin-top: 1rem;
+  width: 100%;
+  .banner {
+    @include grid();
+    .banner-content {
+      grid-area: banner-content;
+      h1 {
+        padding: 15% 0 0;
+        font-size: 8rem;
+        color: $ufo-color;
+      }
+      h2 {
+        font-size: 6rem;
+      }
+      p {
+        margin: 2rem 0;
+        font-size: 4rem;
+        font-weight: 600;
+      }
+      button {
+        @include button;
+      }
+    }
+    .banner-img {
+      padding: 1.5rem;
+      grid-area: banner-img;
+      @include flex();
+      img {
+        width: 80%;
+      }
+    }
+  }
+}

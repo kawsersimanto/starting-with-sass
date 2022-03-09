@@ -1,0 +1,59 @@
+@import "variables";
+@import "mixin";
+
+html {
+  font-size: 10px;
+}
+
+header {
+  padding: 2rem 0;
+  width: 100%;
+  nav {
+    @include flex(space-between);
+    .logo {
+      cursor: pointer;
+      @include flex(space-between);
+      width: 6rem;
+      img {
+        width: 100%;
+        
+      }
+      h1 {
+        font-size: 3.5rem;
+        color: $font-color;
+        span {
+          color: $ufo-color;
+        }
+      }
+    }
+    .menu {
+      @include flex(none);
+      li {
+        list-style: none;
+        display: inline-block;
+        a {
+          margin: 0 4rem;
+          font-size: 1.8rem;
+          font-weight: 600;
+          color: $font-color;
+          text-decoration: none;
+          transition: all 0.3s ease 0s;
+          &:hover{
+            color: $ufo-color;
+          }
+        }
+        .btn {
+          @include button();
+        }
+        .menu-icon {
+          display: none;
+          margin-left: 2rem;
+          width: 3rem;
+          img {
+            width: 100%;
+          }
+        }
+      }
+    }
+  }
+}
